@@ -15,7 +15,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src"
+    "baseUrl": "src",
+    // Recommended: Compiler complains about expressions implicitly typed as 'any'
+    "noImplicitAny": true
   },
-  "include": ["src"]
+  "include": ["src"], // which files to compile
+  "exclude": ["node_modules"] // which files to skip
 }
