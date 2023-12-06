@@ -6,6 +6,7 @@ const renderProfiler = (
   startTime: number,
   commitTime: number
 ): void =>
+  // eslint-disable-next-line no-console
   console.table({
     "Profiler Data": {
       id,
