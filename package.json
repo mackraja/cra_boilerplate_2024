@@ -27,6 +27,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./src/**/*.{js,ts,tsx}",
     "lint:fix": "eslint --fix ./src/**/*.{js,ts,tsx}",
+    "format": "prettier --write ./src/**/*.{js,ts,tsx}",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
@@ -60,6 +61,8 @@
     "@typescript-eslint/parser": "^7.1.1",
     "commitlint": "^19.0.3",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "husky": "^9.0.11",
@@ -69,7 +72,7 @@
   "lint-staged": {
     "src/**/*.{js,ts,tsx}": [
       "npm run lint:fix",
-      "prettier --write --ignore-unknown"
+      "npm run format"
     ]
   },
   "commitlint": {
