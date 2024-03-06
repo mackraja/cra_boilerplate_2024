@@ -70,9 +70,10 @@
     "prettier": "^3.2.5"
   },
   "lint-staged": {
-    "src/**/*.{js,ts,tsx}": [
+    "src/**/*.{js,ts,tsx,css}": [
       "npm run lint:fix",
-      "npm run format"
+      "npm run format",
+      "git add"
     ]
   },
   "commitlint": {
