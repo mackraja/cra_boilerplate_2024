@@ -4,7 +4,7 @@ const renderProfiler = (
   actualDuration: number,
   baseDuration: number,
   startTime: number,
-  commitTime: number
+  commitTime: number,
 ): void =>
   // eslint-disable-next-line no-console
   console.table({

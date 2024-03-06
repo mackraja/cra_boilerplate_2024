@@ -1,4 +1,5 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "es2021": true
@@ -6,6 +7,9 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "rules": {
+      "prettier/prettier": "warn"
     }
   },
   "extends": [
@@ -26,9 +30,25 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-interface": "off",
-    "simple-import-sort/imports": "error",
+    "react/display-name": "off",
+    "object-shorthand": ["error", "always"],
+    "prefer-template": "error",
     "simple-import-sort/exports": "error",
-    "no-duplicate-imports": ["error", { "includeExports": true }]
+    "no-duplicate-imports": ["error", { "includeExports": true }],
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          [".*(react|redux|axios).*"],
+          [".*(fonts|assets).*"],
+          [".*(components).*"],
+          [".*(data|actions|services).*"],
+          [".*(utils|models).*"],
+          [".*(hooks).*"],
+          [".*(shared).*"]
+        ]
+      }
+    ]
   },
   "overrides": [
     {
