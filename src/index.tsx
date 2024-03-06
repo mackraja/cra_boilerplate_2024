@@ -1,21 +1,21 @@
-import "./index.css";
-
-import { Profiler,StrictMode } from "react";
+import { Profiler, StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 
-import App from "./App";
 import renderProfiler from "./utils/renderProfiler";
 import reportWebVitals from "./utils/reportWebVitals";
 
+import "./index.css";
+import App from "./App";
+
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 root.render(
   <Profiler id="App" onRender={renderProfiler}>
     <StrictMode>
       <App />
     </StrictMode>
-  </Profiler>
+  </Profiler>,
 );
 
 // If you want to start measuring performance in your app, pass a function
